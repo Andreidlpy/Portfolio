@@ -8,7 +8,7 @@
           <p class="text-base md:text-lg dm:text-xl py-2 text-gray-700 text-justify font-normal ">"{{ t('phrase1') }}".</p>
           <button class="  text-sm md:text-lg flex items-center gap-5 text-white my-3 px-3 py-2 rounded-lg bg-[#3f3d56]  hover:shadow-lg hover:shadow-[#3f3d56]/50 duration-500 ease-linear capitalize"
             @click="downloadPdf" >{{t('download')}} CV 
-            <div><img loading="lazy"  src="@/assets/icons/download-install-line-icon (1).svg" class="w-4 md:w-5 h-5" alt=""></div>
+            <div><img loading="lazy"  src="@/assets/icons/download-install-line-icon.svg" class="w-4 md:w-5 h-5" alt=""></div>
           </button>
         </div>
         <div class="w-3/4 md:w-1/2  flex items-center justify-center animate-fade-in ">
