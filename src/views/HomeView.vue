@@ -1,7 +1,7 @@
 <template>
   <section id="home" class="px-5 bg-gray-100">
-    <div class="min-h-screen flex items-center justify-center  font-krub " >
-      <div class="container  py-12 flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto ">
+    <div class="min-h-screen flex items-center justify-center  font-krub pt-20" >
+      <div class="container  flex flex-col md:flex-row items-center justify-center  max-w-[1200px] mx-auto ">
         <div class="animate-fade-in  md:pr-8">
           <h1 ref="title" class="text-3xl md:text-5xl font-bold text-gray-800 mb-4 self-start capitalize ">{{ t('hello') }}! {{t('im')}} Andrei.</h1>
           <h2 class="text-base md:text-2xl text-gray-700 self-start font-semibold uppercase ">FRONT END Developer</h2>

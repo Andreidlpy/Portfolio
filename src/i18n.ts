@@ -10,6 +10,7 @@ export default {
     im: "I'm",
     phrase1: "The beauty of being a frontend developer is that you can see your work come to life in the browser.",
     download: 'download',
+    home: 'home'
   },
   es: {
     hello: 'hola',
@@ -21,6 +22,7 @@ export default {
     my: 'mis',
     im: "Soy",
     phrase1: "La belleza de ser un frontend developer es que puedes ver tu trabajo cobrar vida en el navegador",
-    download: 'descargar'
+    download: 'descargar',
+    home: 'Inicio'
   },
 }

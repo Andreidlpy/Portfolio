@@ -16,10 +16,12 @@
                <img loading="lazy" v-for="apps in proyect?.apps" class="h-10 w-10 md:w-10 md:h-10" :src="getUrl(apps)" alt="" srcset="">
               </div>
               <div class="grid grid-cols-2 items-center gap-5">
-                <RouterLink to="">
+                <a :href="proyect.githubLink" target="_blank">
                   <img loading="lazy" src="@/assets/skillsIcons/github.svg" alt="" srcset=""  class="w-8 md:w-10">
-                </RouterLink>
-                <button class="bg-black px-2 py-1 text-white rounded-lg text-base">Demo</button>
+                </a>
+                <a :href="proyect.demoLink" target="_blank">
+                  <button class="bg-black px-2 py-1 text-white rounded-lg text-base">Demo</button>
+                </a>
               </div>
             </div>
           </div>
@@ -40,8 +42,8 @@ const proyects = ref([
     name: 'Rick and Morty ',
     changeState: false, 
     svg: 'ecommerce-website-icon', 
-    githubLink: '',
-    demoLink: '', 
+    githubLink: 'https://github.com/Andreidlpy/rickandmorty-app',
+    demoLink: 'https://andrei-rickandmorty.netlify.app/', 
     img: 'https://res.cloudinary.com/andreicloudimg/image/upload/v1682465214/RickAndMortyPage_tnrvbw.jpg',
     apps: ['vue.svg', 'tailwind-css.svg']
   },
