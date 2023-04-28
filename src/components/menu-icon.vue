@@ -17,13 +17,4 @@ const emits = defineEmits<Emits>()
 </script>
 
 <style scoped>
-.hamburger div:first-child{
-    @apply rotate-45 translate-y-2;
-}
-.hamburger div:nth-child(2){
-    @apply invisible;
-}
-.hamburger div:last-child{
-    @apply -rotate-45 -translate-y-1;
-}
 </style>
