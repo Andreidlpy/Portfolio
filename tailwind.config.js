@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily:{
@@ -10,7 +10,7 @@ module.exports = {
       },
       animation:{
         wiggle: 'wiggle 1s ease-in-out infinite',
-        fade: 'fade 1s '
+        fade: 'fade 1s ',
       },
       keyframes:{
         wiggle:{
@@ -20,7 +20,7 @@ module.exports = {
         fade:{
           '0%': { opacity: 0},
           '100%': { opacity: 1},
-        }
+        },
       }
     },
   },

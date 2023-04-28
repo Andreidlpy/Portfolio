@@ -1,7 +1,7 @@
 <template>
       <section id="contact" class="bg-gray-100 ">
           <div class="min-h-[500px] mx-auto max-w-[800px] flex flex-col justify-center items-center gap-5 font-krub px-5 lg:px-0 animate-fade">
-              <div class="text-[#3f3d56] text-4xl font-bold uppercase">{{t('contact')}}</div>
+              <div class="text-[#3f3d56] text-2xl sm:text-4xl font-semibold uppercase">{{t('contact')}}</div>
               <p class="text-base md:text-lg dm:text-xl py-2 text-gray-700 text-justify font-semibold">Gracias por visitar mi página web. Si necesita ponerse en contacto conmigo, estaré encantado de ayudarle. Puede hacerlo a través de los siguientes enlaces:</p>
               <div class="flex items-center justify-center space-x-4 w-full">
                   <a href = "mailto:dyausinoh@hotmail.com?subject = Feedback&body = Message" class="hover:animate-wiggle">

@@ -16,21 +16,66 @@
             
             <template v-for="link in links">
               <div @click="scrollToSection(link.name)" 
-              class=" cursor-pointer px-3 py-2 text-lg font-semibold text-white  hover:text-white hover:underline duration-500 focus:underline capitalize">
+              class=" cursor-pointer px-3 py-2 text-lg font-semibold  text-white  hover:text-white hover:underline duration-500 focus:underline capitalize">
               {{ t(link.name) }}
             </div>
             </template>
           </div>
         </div>
+        <menu-icon @menuBar="useMenuBar"/>
       </div>
     </div>
+    <Transition name="expand">
+      <div v-if="menu" 
+      class="
+      md:hidden
+      bg-gray-100 
+      dark:bg-black 
+      dark:text-white 
+      dark:bg-opacity-0
+      ease-linear 
+      font-bold 
+      mobile-menu 
+      text-center 
+      tracking-wide 
+      uppercase 
+      w-full"  >
+      <RouterLink v-for="{ name } of links"  :key="name" to="" 
+        @click=scrollToSection(name)
+        class="text-normal 
+        bg-opacity-80
+        block 
+        border-white
+        dark:bg-black 
+        dark:bg-opacity-80
+        dark:hover:bg-black
+        decoration-2
+        decoration-stone-500
+        duration-100
+        ease-in
+        hover:bg-gray-200  
+        hover:underline
+        pb-3 
+        pt-2 
+        px-4 
+        underline-offset-8
+        ">
+        <div
+          class="duration-500 animate-fade"
+          >
+          {{name}}
+        </div>
+      </RouterLink>
+      </div>
+    </Transition>
   </nav>
- 
 </template>
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 import { useI18n } from "vue-i18n";
+
+import menuIcon from './menu-icon.vue';
 
 const hideNav = ref(false);
 let scrollPosition = 0;
@@ -43,6 +88,12 @@ const links = ref([
   { name: 'projects'},
   { name: 'contact'},
 ])
+
+const menu = ref( false )
+
+const useMenuBar = ( ) => {
+    menu.value = !menu.value
+}
 
 const changeLanguage = ( value: string ) => {
   showLanguage.value = !showLanguage.value
@@ -69,6 +120,7 @@ const scrollToSection = ( sectionId : string) => {
       top: section.offsetTop,
       behavior: 'smooth'
     });
+
   }
 }
 
@@ -103,4 +155,5 @@ option:checked {
   background-color: #2563eb;
   color: #fff;
 }
+
 </style>
